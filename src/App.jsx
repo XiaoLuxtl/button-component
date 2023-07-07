@@ -56,6 +56,25 @@ function App() {
             </Button>
           </div>
         </div>
+        {/* Icons */}
+        <div className="flex">
+          <div className="w-1/4">
+            <p className="pt-3 pb-2">
+              {'<Button color="primary" startIcon="search">Default</Button>'}
+            </p>
+            <Button color="primary" startIcon="search">
+              Default
+            </Button>
+          </div>
+          <div className="w-1/4">
+            <p className="pt-3 pb-2">
+              {'<Button color="primary" endIcon="search">Default</Button>'}
+            </p>
+            <Button color="primary" endIcon="search">
+              Default
+            </Button>
+          </div>
+        </div>
         {/* Size */}
         <div className="flex">
           <div className="w-1/4">
