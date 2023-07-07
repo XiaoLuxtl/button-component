@@ -9,111 +9,115 @@ function App() {
   */
 
   return (
-    <main className="flex flex-col max-w-7xl m-auto">
-      <h3 className="text-4xl pb-2">Buttons</h3>
-      <div>
-        <p className="pt-3 pb-2">{"<Button>Default</Button>"}</p>
-        <Button>Default</Button>
-      </div>
-      {/* Default */}
-      <div>
-        <p className="pt-3 pb-2">
-          {'<Button variant="outline" color="primary">Default</Button>'}
-        </p>
-        <Button variant="outline" color="primary">
-          Default
-        </Button>
-      </div>
-      {/* Text Variant */}
-      <div>
-        <p className="pt-3 pb-2">
-          {'<Button variant="text" color="primary">Default</Button>'}
-        </p>
-        <Button variant="text" color="primary">
-          Default
-        </Button>
-      </div>
-      {/* Without Shadow */}
-      <div>
-        <p className="pt-3 pb-2">
-          {'<Button color="primary" disableShadow>Default</Button>'}
-        </p>
-        <Button color="primary" disableShadow>
-          Default
-        </Button>
-      </div>
-      {/* Disabled */}
-      <div className="flex">
-        <div className="w-1/4">
-          <p className="pt-3 pb-2">{"<Button disabled>Default</Button>"}</p>
-          <Button disabled>Default</Button>
+    <div className="max-w-7xl m-auto">
+      <main className="flex flex-col">
+        <h3 className="text-4xl pb-2">Buttons</h3>
+        <div>
+          <p className="pt-3 pb-2">{"<Button>Default</Button>"}</p>
+          <Button>Default</Button>
         </div>
-        <div className="w-1/4">
-          <p className="pt-3 pb-2">{"<Button disabled>Default</Button>"}</p>
-          <Button variant="text" disabled>
+        {/* Default */}
+        <div>
+          <p className="pt-3 pb-2">
+            {'<Button variant="outline" color="primary">Default</Button>'}
+          </p>
+          <Button variant="outline" color="primary">
             Default
           </Button>
         </div>
-      </div>
-      {/* Size */}
-      <div className="flex">
-        <div className="w-1/4">
-          <p className="pt-3 pb-2">{'<Button size="sm">Default</Button>'}</p>
-          <Button size="sm">Default</Button>
-        </div>
-        <div className="w-1/4">
-          <p className="pt-3 pb-2">{'<Button size="md">Default</Button>'}</p>
-          <Button size="md">Default</Button>
-        </div>
-        <div className="w-1/4">
-          <p className="pt-3 pb-2">{'<Button size="lg">Default</Button>'}</p>
-          <Button size="lg">Default</Button>
-        </div>
-      </div>
-      {/* Color */}
-      <div className="flex">
-        <div className="w-1/4">
+        {/* Text Variant */}
+        <div>
           <p className="pt-3 pb-2">
-            {'<Button color="default">'}
-            <br />
-            Default
-            <br />
-            {"</Button>"}
+            {'<Button variant="text" color="primary">Default</Button>'}
           </p>
-          <Button color="default">Default</Button>
+          <Button variant="text" color="primary">
+            Default
+          </Button>
         </div>
-        <div className="w-1/4">
+        {/* Without Shadow */}
+        <div>
           <p className="pt-3 pb-2">
-            {'<Button color="primary">'}
-            <br />
-            Default
-            <br />
-            {"</Button>"}
+            {'<Button color="primary" disableShadow>Default</Button>'}
           </p>
-          <Button color="primary">Default</Button>
-        </div>
-        <div className="w-1/4">
-          <p className="pt-3 pb-2">
-            {'<Button color="secondary">'}
-            <br />
+          <Button color="primary" disableShadow>
             Default
-            <br />
-            {"</Button>"}
-          </p>
-          <Button color="secondary">Default</Button>
+          </Button>
         </div>
-        <div className="w-1/4">
-          <p className="pt-3 pb-2">
-            {'<Button color="danger">'}
-            <br />
-            Default
-            <br />
-            {"</Button>"}
-          </p>
-          <Button color="danger">Default</Button>
+        {/* Disabled */}
+        <div className="flex">
+          <div className="w-1/4">
+            <p className="pt-3 pb-2">{"<Button disabled>Default</Button>"}</p>
+            <Button disabled>Default</Button>
+          </div>
+          <div className="w-1/4">
+            <p className="pt-3 pb-2">{"<Button disabled>Default</Button>"}</p>
+            <Button variant="text" disabled>
+              Default
+            </Button>
+          </div>
         </div>
-      </div>
-    </main>
+        {/* Size */}
+        <div className="flex">
+          <div className="w-1/4">
+            <p className="pt-3 pb-2">{'<Button size="sm">Default</Button>'}</p>
+            <Button size="sm">Default</Button>
+          </div>
+          <div className="w-1/4">
+            <p className="pt-3 pb-2">{'<Button size="md">Default</Button>'}</p>
+            <Button size="md">Default</Button>
+          </div>
+          <div className="w-1/4">
+            <p className="pt-3 pb-2">{'<Button size="lg">Default</Button>'}</p>
+            <Button size="lg">Default</Button>
+          </div>
+        </div>
+        {/* Color */}
+        <div className="flex">
+          <div className="w-1/4">
+            <p className="pt-3 pb-2">
+              {'<Button color="default">'}
+              <br />
+              Default
+              <br />
+              {"</Button>"}
+            </p>
+            <Button color="default">Default</Button>
+          </div>
+          <div className="w-1/4">
+            <p className="pt-3 pb-2">
+              {'<Button color="primary">'}
+              <br />
+              Default
+              <br />
+              {"</Button>"}
+            </p>
+            <Button color="primary">Default</Button>
+          </div>
+          <div className="w-1/4">
+            <p className="pt-3 pb-2">
+              {'<Button color="secondary">'}
+              <br />
+              Default
+              <br />
+              {"</Button>"}
+            </p>
+            <Button color="secondary">Default</Button>
+          </div>
+          <div className="w-1/4">
+            <p className="pt-3 pb-2">
+              {'<Button color="danger">'}
+              <br />
+              Default
+              <br />
+              {"</Button>"}
+            </p>
+            <Button color="danger">Default</Button>
+          </div>
+        </div>
+      </main>
+
+      <footer className="pt-12 text-xs">Solution by Luis R.</footer>
+    </div>
   );
 }
 
