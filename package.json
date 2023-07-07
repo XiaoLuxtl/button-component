@@ -2,6 +2,7 @@
   "name": "button-component",
   "private": true,
   "version": "0.0.0",
+  "homepage": "https://xiaoluxtl.github.io/button-component",
   "type": "module",
   "scripts": {
     "predeploy": "npm run build",
