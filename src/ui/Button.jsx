@@ -3,9 +3,11 @@ import PropTypes from "prop-types";
 export function Button({
   variant = "default",
   color = "default",
-  size = "md",
-  disableShadow = false,
+  size = "sm",
   disabled = false,
+  disableShadow = false,
+  startIcon = null,
+  endIcon = null,
   children,
 }) {
   /*
@@ -20,9 +22,9 @@ export function Button({
   const buttonVariant = {
     default: {
       default: `bg-default hover:bg-default-hover hover:bg-default-hover focus:bg-default-hover text-theme-gray`,
-      primary: `bg-primary hover:bg-primary-hover hover:bg-primary-hover focus:bg-primary-hover text-theme-gray`,
-      secondary: `bg-secondary hover:bg-secondary-hover hover:bg-secondary-hover focus:bg-secondary-hover text-theme-gray`,
-      danger: `bg-danger hover:bg-danger-hover hover:bg-danger-hover focus:bg-danger-hover text-theme-gray`,
+      primary: `bg-primary hover:bg-primary-hover hover:bg-primary-hover focus:bg-primary-hover text-white`,
+      secondary: `bg-secondary hover:bg-secondary-hover hover:bg-secondary-hover focus:bg-secondary-hover text-white`,
+      danger: `bg-danger hover:bg-danger-hover hover:bg-danger-hover focus:bg-danger-hover text-white`,
     },
     outline: {
       default: `border border-2 border-default hover:bg-default-hover focus:bg-default-hover hover:bg-opacity-20 focus:bg-opacity-20 text-default`,
@@ -44,13 +46,13 @@ export function Button({
   };
 
   const buttonSize = {
-    sm: "px-5 py-2.5 mr-2 mb-2",
-    md: "px-7 py-4 mr-2 mb-2",
-    lg: "px-10 py-6 mr-2 mb-2",
+    sm: "px-4 py-2",
+    md: "px-5 py-2.5",
+    lg: "px-6 py-3",
   };
 
-  const baseClass =
-    "font-medium rounded-lg text-sm text-center transition ease-in";
+  const buttonBaseClass =
+    "flex gap-2 items-center font-medium rounded-lg transition-all ease-in text-xl text-center";
 
   const buttonShadow =
     disableShadow || variant !== "default" ? "" : "shadow-md";
@@ -63,18 +65,22 @@ export function Button({
     <>
       <button
         type="button"
-        className={
-          `
-        ${baseClass}
+        className={`
+        ${buttonBaseClass}
         ${buttonStyle}
         ${buttonSize[size]}    
         ${buttonShadow}
         `
-          // .replace(/[\r\n]+/g, "")
-          // .replace(/\s+/g, " ")
-        }
+          .replace(/[\r\n]+/g, "") // clear CRLF
+          .replace(/\s+/g, " ")} // trim multiple whitespaces
       >
+        {startIcon && (
+          <span className="material-icons-round text-xl">{startIcon}</span>
+        )}
         {children}
+        {endIcon && (
+          <span className="material-icons-round text-xl">{endIcon}</span>
+        )}
       </button>
     </>
   );
@@ -86,5 +92,7 @@ Button.propTypes = {
   size: PropTypes.oneOf(["sm", "md", "lg"]),
   disableShadow: PropTypes.bool,
   disabled: PropTypes.bool,
+  startIcon: PropTypes.string,
+  endIcon: PropTypes.string,
   children: PropTypes.node.isRequired,
 };
