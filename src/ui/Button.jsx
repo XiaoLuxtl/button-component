@@ -11,9 +11,9 @@ export function Button({
   children,
 }) {
   /*
-    Dynamic Class works fine so long as its a full tailwind class name
+    Dynamic Class works fine so long as it's a full tailwind class name
 
-    This doen't work
+    This doesn't work
     <div class="text-{{ error ? 'red' : 'green' }}-600"></div>
 
     This DO work
